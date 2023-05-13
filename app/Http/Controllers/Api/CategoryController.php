@@ -16,8 +16,8 @@ class CategoryController extends Controller
     {
         $categories = Category::included()
                                 ->filter()
-                                ->sort()
-                                ->get();
+                                ->sort()                              
+                                ->getOrPaginate();
         return $categories;
     }
 
