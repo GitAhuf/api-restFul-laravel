@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,4 @@ Route::delete('categories/{category}', [CategoryController::class, 'delete'])->n
  */
 
  Route::apiResource('categories', CategoryController::class)->names('api-v1.categories');
+ Route::apiResource('posts', PostController::class)->names('api-v1.posts');
